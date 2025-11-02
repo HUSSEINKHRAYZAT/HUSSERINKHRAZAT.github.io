@@ -1,24 +1,17 @@
-<!--
-FILE: index.html
-A modern, accessible, responsive single-file GitHub Pages starter.
-Includes: header, hero, projects grid, about, contact, footer, theme toggle.
-Links to assets/styles.css and assets/script.js (also included below).
--->
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Your Name — Projects & Portfolio</title>
-  <meta name="description" content="Clean, modern GitHub Pages portfolio template." />
-  <link rel="stylesheet" href="/assets/styles.css">
-  <link rel="icon" href="/favicon.ico">
+  <title>HUSSEINKHRAYZAT — Fullstack Dev</title>
+  <meta name="description" content="Portfolio of HUSSEINKHRAYZAT — Fullstack Developer." />
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="#">YourName</a>
+      <a class="brand" href="#">HUSSEINKHRAYZAT</a>
       <nav class="nav" id="nav">
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
@@ -32,220 +25,50 @@ Links to assets/styles.css and assets/script.js (also included below).
   <main>
     <section class="hero container">
       <div>
-        <h1>Hi — I'm <span class="accent">Your Name</span></h1>
-        <p class="lead">Frontend developer &amp; maker. I build fast, accessible, and beautiful interfaces.</p>
+        <h1>Hi — I'm <span class="accent">HUSSEINKHRAYZAT</span></h1>
+        <p class="lead">Fullstack Dev passionate about modern web development and automation.</p>
         <p>
           <a class="btn" href="#projects">View projects</a>
-          <a class="btn ghost" href="/CV.pdf">Download CV</a>
+          <a class="btn ghost" href="CV.pdf">Download CV</a>
         </p>
       </div>
-      <div class="hero-card" aria-hidden="true">
-        <img src="/assets/hero-sample.png" alt="Sample screenshot" loading="lazy">
+      <div class="hero-card">
+        <img src="assets/hero-sample.png" alt="Sample project preview" loading="lazy">
       </div>
     </section>
 
     <section id="projects" class="container projects">
       <h2>Selected projects</h2>
-      <div id="projectsGrid" class="grid">
-        <!-- Project cards will be rendered by assets/script.js from DATA below -->
-      </div>
+      <div id="projectsGrid" class="grid"></div>
     </section>
 
     <section id="about" class="container about">
       <h2>About</h2>
-      <p>Short bio — who you are, what you like building, tech stack, and links to GitHub/LinkedIn.</p>
+      <p>I'm a Fullstack Developer skilled in modern web technologies, APIs, and cloud deployment. 
+      Explore my GitHub for more projects and collaborations.</p>
     </section>
 
     <section id="contact" class="container contact">
       <h2>Contact</h2>
-      <p>Want to work together? <a href="mailto:you@example.com">you@example.com</a></p>
-      <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
-        <label>
-          <span>Name</span>
-          <input name="name" required>
-        </label>
-        <label>
-          <span>Email</span>
-          <input name="email" type="email" required>
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-        <button class="btn" type="submit">Send</button>
-      </form>
+      <p>Want to work together? <a href="mailto:husseinkhrayzat@example.com">husseinkhrayzat@example.com</a></p>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <small>© <span id="year">2025</span> Your Name • <a href="https://github.com/yourname">GitHub</a></small>
+      <small>© <span id="year">2025</span> HUSSEINKHRAYZAT • 
+      <a href="https://github.com/HUSSEINKHRAYZAT">GitHub</a></small>
     </div>
   </footer>
 
-  <script type="module" src="/assets/script.js"></script>
+  <script type="module" src="assets/script.js"></script>
 
-  <!-- Inline sample DATA: edit or move to /data/projects.json -->
   <script id="project-data" type="application/json">
   [
-    {"title":"Inception (sample)","desc":"Docker + Nginx project","tech":"Docker, Nginx, PHP","link":"https://github.com/yourname/inception"},
-    {"title":"MiniShell","desc":"A small shell implementation project","tech":"C, Unix","link":"https://github.com/yourname/minishell"},
-    {"title":"Portfolio","desc":"This GitHub Pages site","tech":"HTML, CSS, JS","link":"https://github.com/yourname/portfolio"}
+    {"title": "Inception", "desc": "Docker + Nginx project", "tech": "Docker, Nginx, PHP", "link": "https://github.com/HUSSEINKHRAYZAT/inception"},
+    {"title": "MiniShell", "desc": "Unix shell implementation", "tech": "C, Unix", "link": "https://github.com/HUSSEINKHRAYZAT/minishell"},
+    {"title": "Portfolio", "desc": "This GitHub Pages site", "tech": "HTML, CSS, JS", "link": "https://github.com/HUSSEINKHRAYZAT/husseinkhrayzatsite"}
   ]
   </script>
 </body>
 </html>
-
-
-/*
-FILE: assets/styles.css
-A compact, modern responsive stylesheet with CSS variables, fluid type and small animations.
-*/
-:root{
-  --bg:#0f1720; /* dark base */
-  --card:#0b1220;
-  --muted:#9aa6b2;
-  --accent:#7dd3fc;
-  --glass:rgba(255,255,255,0.04);
-  --radius:14px;
-  --max-width:1100px;
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background:linear-gradient(180deg,#071021 0%, #07121a 100%); color:#e6eef6; -webkit-font-smoothing:antialiased;
-}
-.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
-.site-header{backdrop-filter:blur(6px);position:sticky;top:0;padding:0.5rem 0;background:transparent;z-index:40}
-.site-header .container{display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:700;font-size:1.1rem;color:var(--accent);text-decoration:none}
-.nav{display:flex;gap:1rem;align-items:center}
-.nav a{color:var(--muted);text-decoration:none}
-.btn{display:inline-block;padding:0.6rem 1rem;border-radius:10px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#021018;text-decoration:none;font-weight:600;border:none;cursor:pointer}
-.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(125,211,252,0.12)}
-.btn.small{padding:0.25rem 0.5rem;border-radius:8px}
-.mobile-toggle{display:none;background:none;border:none;color:var(--muted);font-size:1.5rem}
-.hero{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:center;padding-top:3rem}
-.hero .lead{color:var(--muted);max-width:60ch}
-.hero-card{background:var(--glass);padding:1rem;border-radius:12px;display:flex;align-items:center;justify-content:center}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1rem;border-radius:12px}
-.accent{color:var(--accent)}
-.about,.contact{padding:3rem 0}
-.site-footer{padding:2rem 0;color:var(--muted)}
-@media (max-width:900px){
-  .hero{grid-template-columns:1fr;}
-  .nav{position:fixed;right:1rem;top:64px;background:rgba(2,6,23,0.8);flex-direction:column;padding:1rem;border-radius:10px;display:none}
-  .nav.show{display:flex}
-  .mobile-toggle{display:block}
-}
-
-/* Light theme overrides (script toggles data-theme="light" on <html>) */
-html[data-theme="light"]{color:#042031;background:#f6fbff}
-html[data-theme="light"] .site-header{background:#ffffff}
-
-
-/*
-FILE: assets/script.js
-Vanilla module: theme toggle, mobile nav, projects renderer, smooth scroll
-*/
-
-const defaultTheme = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-function applyTheme(t){
-  if(t==='light') document.documentElement.setAttribute('data-theme','light'); else document.documentElement.removeAttribute('data-theme');
-  localStorage.setItem('theme',t);
-  const btn = document.getElementById('themeToggle'); if(btn) btn.setAttribute('aria-pressed', t==='light');
-}
-applyTheme(defaultTheme);
-
-document.getElementById('themeToggle')?.addEventListener('click', ()=>{
-  const cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-  applyTheme(cur==='light' ? 'dark' : 'light');
-});
-
-// mobile nav toggle
-const mobileToggle = document.getElementById('mobileToggle');
-mobileToggle?.addEventListener('click', ()=>{
-  const nav = document.getElementById('nav');
-  const expanded = nav.classList.toggle('show');
-  mobileToggle.setAttribute('aria-expanded', expanded);
-});
-
-// Render projects
-function renderProjects(){
-  const raw = document.getElementById('project-data')?.textContent || '[]';
-  let data = [];
-  try{ data = JSON.parse(raw); }catch(e){ console.warn('invalid project-data') }
-  const grid = document.getElementById('projectsGrid');
-  if(!grid) return;
-  grid.innerHTML = '';
-  data.forEach(p => {
-    const el = document.createElement('article'); el.className='card';
-    el.innerHTML = `<h3><a href="${p.link}" target="_blank" rel="noopener">${p.title}</a></h3>
-      <p>${p.desc}</p>
-      <small>${p.tech}</small>`;
-    grid.appendChild(el);
-  });
-}
-renderProjects();
-
-// small niceties: set year
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', e=>{
-  const href = a.getAttribute('href'); if(href==='#') return;
-  const el = document.querySelector(href); if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); if(document.getElementById('nav').classList.contains('show')) document.getElementById('nav').classList.remove('show'); }
-}));
-
-
-/*
-FILE: .github/workflows/deploy-gh-pages.yml
-GitHub Action to deploy static site to gh-pages branch using peaceiris/actions-gh-pages
-This will take repository root and push to gh-pages; configure Pages to serve from gh-pages branch.
-*/
-
-# YAML
-name: Deploy static site to gh-pages
-on:
-  push:
-    branches: [ main, master ]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup Node (optional)
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-
-
-/*
-FILE: README.md
-Instructions to use and deploy.
-*/
-
-# GitHub Pages Starter
-
-1. Replace placeholder content: edit `index.html`, `assets/styles.css`, and `assets/script.js`.
-2. Add your `CV.pdf`, `favicon.ico` and images to `/assets/`.
-3. Commit and push to `main` branch.
-4. Enable GitHub Pages: repository Settings → Pages → Source: `gh-pages` branch (or use `main`/`/docs` if you prefer). The included workflow pushes to `gh-pages` on every push to `main`.
-
-Optional: if you prefer manual deploy, use `git subtree push --prefix ./ origin gh-pages` or use `gh` CLI.
-
-Customization tips:
-- Personalize colors in `:root` variables.
-- Add a `projects.json` file and fetch it instead of inline data.
-- Use a static-site generator (11ty, Hugo) for a larger site.
-
-License: MIT
